@@ -1,0 +1,22 @@
+00_general - повторяющееся элементы
+01_header - это понятно
+01_home - первая секция в index.html
+01_page - <main>...</main>
+98_side - боковая панель (<aside></aside>)
+99_footer - тоже понятно 
+fonts__google.scss - для подключения шрифтов fonts_google
+fonts.scss - не изменять вручную, все делает gulp 
+forms.scss - элементы формы и btn 
+gallery__libs.scss - для подключения стилей дополнительных библиотек (например noUISlider.scss)
+grid.scss - переменные для сетки
+icons.scss - иконные шрифты
+mixins.scss - в сборке gulp, подключение шрифта, адаптивный шрифт, адаптивное свойство
+null.scss - обнуляющие стили
+popup.scss - стили popup-окна 
+slider.scss - для оформления слайдеров
+style__catalog.scss - дополнительные стили catalog.html
+style.scss - собирает все файлы стилей
+variables.scss  - переменная основного шрифта и другие полезные переменные
+
+ui.scss - пример от Жеки (тоже самое, что и мое 00_general)
+

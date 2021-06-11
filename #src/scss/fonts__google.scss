@@ -1,0 +1,15 @@
+// Для Google Fonts
+// Ctrl + SHIFT + P ==> Google Fonts: Insert CSS @import ==> пишем название шрифта ==>
+// ==> завернуть в кавычки, все что в скобках ==> удалить ненужные начертания шрифтов ==>
+
+// ==> Добавить в конце строки google-шрифтов
+// &display=swap - для ускорения загрузки страницы (обязательно)
+// &subset=cyrillic-ext -  для подключения кирилицы
+
+// Пример удалить после подключения:
+// @import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext");
+
+// Open Sans Regular, Open Sans SemiBold, Open Sans Light Italic
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,regular,600&display=swap");
+// Montserrat Bold
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700&display=swap");

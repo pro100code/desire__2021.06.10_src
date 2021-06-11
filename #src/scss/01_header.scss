@@ -1,0 +1,232 @@
+.header {
+	background: $c-white;
+	@media (max-width: 600px) {
+		height: 50px;
+	}
+	@media (min-width: 600px) {
+		position: relative;
+	}
+	@media (min-width: $md2+px) {
+		height: 70px;
+	}
+	@media (min-width: $md1+px) {
+		height: 120px;
+	}
+	// .header__content
+	&__content {
+	}
+	// .header__menu
+	&__menu {
+		@media (max-width: 600px) {
+			height: 50px;
+			@include adaptiv-value("padding-left", 20, 5, 20);
+			@include adaptiv-value("padding-right", 20, 5, 20);
+		}
+		@media (min-width: 600px) {
+			height: 70px;
+		}
+		@media (min-width: $md1+px) {
+			height: 120px;
+		}
+	}
+	// .header__logo
+	&__logo {
+		cursor: pointer;
+		@media (max-width: 599px) {
+			display: block;
+			position: relative;
+			z-index: 10;
+		}
+		@media (min-width: 600px) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+// фиксированная шапка
+.menu {
+	@media (max-width: 600px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .menu__icon => BURGER
+	&__icon {
+		display: none;
+		@media (max-width: 600px) {
+			display: block;
+			width: 30px;
+			height: 18px;
+			position: relative;
+			z-index: 10;
+			cursor: pointer;
+			span,
+			&::before,
+			&::after {
+				height: 10%;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				transition: all 0.3s ease 0s;
+				background: $c-black; // цвет бургера
+			}
+			&::before,
+			&::after {
+				content: "";
+			}
+			span {
+				top: 50%;
+				transform: scale(1) translate(0, -50%);
+			}
+			&::before {
+				top: 0;
+			}
+			&::after {
+				bottom: 0;
+			}
+			&._active {
+				span {
+					transform: scale(0) translate(0, -50%);
+				}
+				&::before {
+					top: 50%;
+					transform: rotate(-45deg) translate(0, -50%);
+				}
+				&::after {
+					bottom: 50%;
+					transform: rotate(45deg) translate(0, 50%);
+				}
+			}
+		}
+	}
+	// .menu__body
+	&__body {
+		@media (max-width: 600px) {
+			height: 50px;
+		}
+		@media (min-width: 600px) {
+			height: 70px;
+		}
+		@media (min-width: $md1+px) {
+			height: 120px;
+		}
+		@media (min-width: 600px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		@media (max-width: 600px) {
+			position: fixed;
+			left: 0;
+			top: -100%;
+			height: 100%;
+			width: 100%;
+			padding: 90px 30px 30px 30px;
+			background: rgba(0, 0, 0, 0.7); // цвет заливки выезжающего меню
+			overflow: auto;
+			transition: all 0.5s ease 0s;
+			&::before {
+				content: "";
+				width: 100%;
+				height: 70px;
+				position: fixed;
+				left: 0;
+				top: 0;
+				background: $c-white; // цвет верхушки
+				// background: transparent; // прозрачный цвет верхушки
+				border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+				z-index: 10;
+				@media (max-width: 600px) {
+					height: 50px;
+				}
+			}
+			&._active {
+				top: 0;
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		@media (min-width: 600px) {
+			display: flex;
+			align-items: center;
+		}
+		li {
+			@media (max-width: 600px) {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+		// .menu__list_left
+		&_left {
+			.menu__link {
+				@media (min-width: $md1+px) {
+					margin: 0px 80px 0px 0px;
+				}
+				@media (min-width: 600px) and (max-width: $md1+px) {
+					@include adaptiv-value("margin-right", 80, 20, 80);
+				}
+			}
+		}
+		// .menu__list_right
+		&_right {
+			.menu__link {
+				@media (min-width: $md1+px) {
+					margin: 0px 0px 0px 80px;
+				}
+				@media (min-width: 600px) and (max-width: $md1+px) {
+					@include adaptiv-value("margin-left", 80, 20, 80);
+				}
+			}
+		}
+	}
+	// .menu__item
+	&__item {
+		@media (max-width: $md4+px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		// .menu__item_btn
+		&_btn {
+		}
+	}
+	// .menu__link
+	&__link {
+		display: block;
+		font-family: $f-Montserrat;
+		font-weight: 600;
+		line-height: 22 / 16 * 100%;
+		color: rgba($c-grey-363838, 0.9);
+		@media (max-width: 600px) {
+			color: $c-white;
+			@include adaptiv-font(16, 35, 35);
+		}
+		@media (min-width: $md2+px) {
+			&:hover {
+			}
+		}
+		// .menu__link_btn
+		&_btn {
+			display: none;
+			@media (min-width: $md3+px) {
+				display: block;
+			}
+			@media (min-width: $md1+px) {
+				margin: 0px 0px 0px 60px;
+			}
+			@media (min-width: 600px) and (max-width: $md1+px) {
+				@include adaptiv-value("margin-left", 60, 20, 60);
+			}
+		}
+	}
+}
+
+// класс на телефонах
+html._touch {
+	// a {
+	// 	color: $c-white;
+	// }
+}

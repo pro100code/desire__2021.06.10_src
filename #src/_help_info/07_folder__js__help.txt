@@ -1,0 +1,103 @@
+=========================> Папка files <==========================
+>----------------------------------------------------------------<
+1) ===> dynamic_adapt.js - для перемещения блоков
+   Добавляем к блоку, который хотим переместить (класс блока куда переносим, при каком расширении, какой будет по счету или (first или last))
+   data-da=".menu__body,640,2(first,last)"  
+....................................................
+
+2) ===> form.js - код формы
+//QUANTITY - блок с выбором количества
+HTML для QUANTITY
+<div class="класс-нашего-элемента quantity">
+	<div class="класс-нашего-элемента quantity__button quantity__button_minus"></div>
+		<div class="класс-нашего-элемента quantity__input">
+			<input autocomplete="off" type="text" name="form[]" value="1">
+		</div>
+	<div class="класс-нашего-элемента quantity__button quantity__button_plus"></div>
+</div>
+ .................................................................
+
+3) ===> function.js - код общих функций
+--------------------------------------->
+// SlideToggle - название функции в файле
+// Код для script.js
+let menuPageIcon = document.querySelector('.menu-side-page__icon');
+let menuPageBody = document.querySelector('.menu-side-page__body');
+menuPageIcon.addEventListener("click", function (e) {
+	menuPageIcon.classList.toggle('_active');
+	// submenu выезжает (элемент изначально должен быть скрыт - display: none) 
+	_slideToggle(menuPageBody);                                                !- плавное выезжание блока(в скопках переменная нужного класса)
+});
+
+--------------------------------------->
+._spollers - для обвертки
+_spoller - для элемента, который должен выехать при нажатии (изначально он {display: none})
+
+--------------------------------------->
+//Tabs (Табы)
+HTML-конструкция
+<div class="product__info info-product _tabs">
+		<nav class="info-product__nav">
+			<div class="info-product__item _tabs-item _active">Tab 1</div>
+			<div class="info-product__item _tabs-item">Tab 2</div>
+		</nav>
+		<div class="info-product__body">
+			<div class="info-product__block _tabs-block _active">
+				Text Tab 1
+			</div>
+
+			<div class="info-product__block _tabs-block">
+				Text Tab 2
+			</div>
+		</div>
+</div>
+..................................................................
+
+4) ===> map.js - карты
+..................................................................
+
+5) ===> regular.js - проверка на телефон и другое
+..................................................................
+ 
+6) ===> script.js - для написания кода в данном проекте
+..................................................................
+
+7) ===> scroll.js - скролл 
+    классы для блока: 
+    a)_scr-item - включает скролл и добавляет к видимуму блоку класс _active
+       .blok{
+	      свойство и значение изначальное 
+	      &._active{
+         свойство и значение когда доскролим 
+	      }
+       }
+
+    b) _goto - класс для ссылок, в href="#класс блока" и делает плавное перемешение
+
+    c) _goto-block - делает плавное перемешение и изменяет ссылку, когда мы назодимся на нужном блоке
+        menu{
+         &__link {
+		     &.active{
+			    свойство и значение ссылки, когда скрол на нужном блоке
+		     }
+	      }
+       }
+..................................................................
+
+ 8) ===> sliders.js - код слайдеров Swiper и Slick-Slider
+ ..................................................................
+
+
+
+=========================> Папка libs - библиотеки <==========================
+>----------------------------------------------------------------< 
+smoothScroll.js - работа скролла  (45:00)  
+inputmask.min.js - маски для формы (_digital - запрет на буквы, _phone - маска для телефона в form.js смотреть)
+
+nouislider.js работает с =>
+wNumb.min.js - для установки полосы при покупке, но нужно и добавить такой же nouislider.scss (01:09:00)
+
+lightgallery.min.js - для работы gallery, но еще и lightgallery.scss (01:14:00)
+tippy.js - для подсказок при навидении на обьект, но еще и tippy.scss
+datepicker-full.min.js и datepicker.scss настройка в form.js- календарь
+

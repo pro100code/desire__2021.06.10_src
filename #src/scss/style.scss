@@ -1,0 +1,24 @@
+// =====> index.html <========================================================================================================================================================
+// =====> style-head
+@import "mixins";
+@import "fonts__google";
+@import "fonts";
+// @import "00_icons";
+@import "00_variables";
+@import "00_null";
+@import "00_gallery__libs";
+
+@import "00_general";
+@import "00_forms";
+@import "00_sliders";
+
+@import "01_header";
+@import "01_main";
+@import "02_home";
+@import "99_footer";
+@import "popup";
+
+// =====> style-footer
+
+// =====> about.html <========================================================================================================================================================
+// @import "style__about";

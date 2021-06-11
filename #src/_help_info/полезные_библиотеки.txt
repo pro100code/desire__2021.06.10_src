@@ -1,0 +1,10 @@
+MixItUp - кнопки для фильтрации контэнта
+https://www.kunkalabs.com/mixitup/
+
+Установка
+npm install --save-dev mixitup (через VS Code можна для GULP)
+
+Видео с подключением через скачивание
+https://www.youtube.com/watch?v=t0iBtwYZmxQ
+
+вкладка Get Started - описание подключения
