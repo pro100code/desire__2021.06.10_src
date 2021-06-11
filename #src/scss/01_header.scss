@@ -137,14 +137,18 @@
 				top: 0;
 				background: $c-white; // цвет верхушки
 				// background: transparent; // прозрачный цвет верхушки
-				border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+				border-bottom: 1px solid rgba($c-grey-DFDFDF, 0.7);
 				z-index: 10;
+				transition: all 0.3s ease 0s;
 				@media (max-width: 600px) {
 					height: 50px;
 				}
 			}
 			&._active {
 				top: 0;
+				&::before {
+					border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+				}
 			}
 		}
 	}
