@@ -1200,12 +1200,12 @@ textarea.input {
   }
 
   .menu__list li {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 20px 0px;
   }
 
   .menu__link {
     color: white;
-    font-size: calc(35px + -19 * ((100vw - 320px) / 1600));
+    font-size: calc(38px + -22 * ((100vw - 320px) / 1600));
   }
 }
 
