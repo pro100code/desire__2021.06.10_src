@@ -49,6 +49,23 @@ body {
 .title {
 	// .title_section
 	&_section {
+		font-family: $f-Montserrat;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 51 / 36 * 100%;
+		color: $c-grey-363838;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 252px;
+			height: 1px;
+			margin: 0 auto;
+			background: $c-grey-979797;
+		}
 	}
 	// .title_block
 	&_block {
