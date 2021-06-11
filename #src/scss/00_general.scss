@@ -6,6 +6,7 @@ body {
 	font-weight: 400;
 	line-height: 27 / 16 * 100%;
 	color: $c-grey-5A5A5A;
+	overflow: hidden;
 	&._lock {
 		overflow: hidden;
 	}
@@ -54,14 +55,14 @@ body {
 
 // Заголовки
 .title {
+	font-family: $f-Montserrat;
+	color: $c-grey-363838;
 	// .title_section
 	&_section {
 		padding: 0px 0px 10px 0px;
-		font-family: $f-Montserrat;
 		font-weight: 700;
 		font-size: 36px;
 		line-height: 51 / 36 * 100%;
-		color: $c-grey-363838;
 		position: relative;
 		&::before {
 			content: "";
@@ -80,6 +81,9 @@ body {
 	}
 	// .title_item
 	&_item {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 23 / 16 * 100%;
 	}
 	// .title_paragraph
 	&_paragraph {
@@ -93,6 +97,25 @@ body {
 .text {
 	// .text_body
 	&_body {
+	}
+}
+
+.button {
+	flex: 0 1 160px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	padding: 15px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 28 / 16 * 100%;
+	color: $c-white-FFFFF0;
+	background: $c-grey-363838;
+	border-radius: 21px;
+	@media (max-width: $md4+px) {
+		width: 140px;
+		border-radius: 21px;
 	}
 }
 

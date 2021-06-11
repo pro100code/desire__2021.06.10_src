@@ -129,11 +129,14 @@ textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	color: $c-grey-A1A1A1; // цвет placeholder
 	&:focus {
 		outline: none;
+		color: $c-grey-363838; // цвет при вводе данных
 	}
 }
 .input {
+	background: transparent;
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
