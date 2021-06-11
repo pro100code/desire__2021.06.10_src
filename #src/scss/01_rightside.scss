@@ -1,0 +1,167 @@
+.rightside {
+	position: absolute;
+	top: 120px;
+	right: -100%;
+	width: 100%;
+	max-width: 694px;
+	height: 100%;
+	box-shadow: 0px 0px 3px 1px $c-grey-363838;
+	z-index: 9;
+	overflow: auto;
+	pointer-events: all;
+	transition: all 0.5s ease 0s;
+	@media (min-width: $md1+px) {
+		padding: 40px 45px;
+	}
+	@media (max-width: $md1+px) {
+		@include adaptiv-value("padding-top", 40, 10, 40);
+		@include adaptiv-value("padding-right", 45, 10, 45);
+		@include adaptiv-value("padding-bottom", 40, 10, 40);
+		@include adaptiv-value("padding-left", 45, 10, 45);
+	}
+	@media (max-width: $md1+px) {
+		max-width: 520px;
+		top: 70px;
+	}
+	@media (max-width: $md3+px) {
+		display: none;
+	}
+	&._active {
+		right: 0;
+	}
+	// .rightside__wrapper
+	&__wrapper {
+		// outline: 1px solid red;
+		position: fixed;
+		left: 50%;
+		top: 0;
+		width: 100%;
+		max-width: $maxWidth + 30px;
+		height: 100%;
+		z-index: 1;
+		transform: translateX(-50%);
+		// background: #000;
+		overflow: hidden;
+		pointer-events: none;
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+	}
+	// .rightside__top
+	&__top {
+	}
+	// .rightside__close
+	&__close {
+		@media (min-width: $md1+px) {
+			margin: 0px 0px 30px 0px;
+		}
+		@media (min-width: $md3+px) {
+			width: 26px;
+			height: 26px;
+			@include adaptiv-value("margin-bottom", 30, 10, 30);
+			position: relative;
+			z-index: 10;
+			cursor: pointer;
+			span,
+			&::before,
+			&::after {
+				height: 5%;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				transition: all 0.5s ease 0s;
+				background: transparent;
+			}
+			&::before,
+			&::after {
+				content: "";
+				transition: all 0.5s ease 0s;
+			}
+			span {
+				// transform: scale(0) translate(0, -50%);
+				display: none;
+			}
+			&::before {
+				top: 0;
+			}
+			&::after {
+				bottom: 0;
+			}
+		}
+		&._active {
+			&::before {
+				top: 50%;
+				background: $c-grey-363838;
+				transform: rotate(-45deg) translate(0, 50%);
+			}
+			&::after {
+				bottom: 50%;
+				transform: rotate(45deg) translate(0, 50%);
+				background: $c-grey-363838;
+			}
+		}
+	}
+	// .rightside__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	// .rightside__logo
+	&__logo {
+		@media (min-width: $md1+px) {
+			margin: 0px 0px 26px 0px;
+		}
+		@media (max-width: $md1+px) {
+			@include adaptiv-value("margin-bottom", 26, 15, 26);
+		}
+	}
+	// .rightside__heading
+	&__heading {
+		max-width: 490px;
+		text-align: center;
+	}
+	// .rightside__title
+	&__title {
+		position: relative;
+		margin: 0px 0px 15px 0px;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 252px;
+			height: 1px;
+			margin: 0 auto;
+			background: $c-grey-979797;
+		}
+	}
+	// .rightside__subtitle
+	&__subtitle {
+		margin: 0px 0px 75px 0px;
+		@media (max-width: $md1+px) {
+			@include adaptiv-value("margin-bottom", 75, 25, 75);
+		}
+	}
+	// .rightside__image
+	&__image {
+		max-width: 483px;
+		max-height: 374px;
+		position: relative;
+		padding: 40%;
+		img {
+			position: absolute;
+			width: 100%;
+			max-width: 483px;
+			height: 100%;
+			max-height: 374px;
+			top: 0;
+			left: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			object-fit: cover;
+		}
+	}
+}

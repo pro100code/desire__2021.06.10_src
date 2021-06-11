@@ -1,0 +1,6 @@
+.page {
+	flex: 1 1 auto;
+	@media (min-width: $md3+px) {
+		position: relative;
+	}
+}
