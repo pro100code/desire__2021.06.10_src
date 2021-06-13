@@ -1,4 +1,4 @@
-//BildSlider
+// BildSlider
 let sliders = document.querySelectorAll('._swiper');
 if (sliders) {
 	for (let index = 0; index < sliders.length; index++) {
@@ -61,63 +61,133 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) { }
 
-let slider_about = new Swiper('.about__slider', {
-	/*
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
-	observer: true,
-	observeParents: true,
-	slidesPerView: 1,
-	spaceBetween: 0,
-	autoHeight: true,
-	speed: 800,
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
-	//lazy: true,
-	// Dotts
-	//pagination: {
-	//	el: '.slider-quality__pagging',
-	//	clickable: true,
-	//},
-	// Arrows
-	navigation: {
-		nextEl: '.about__more .more__item_next',
-		prevEl: '.about__more .more__item_prev',
-	},
-	/*
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
+if (document.querySelector('.main-slider')) {
+	let sliderMainBody = new Swiper('.slider-main__body', {
+		/*
+		effect: 'fade',
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
 		},
-		768: {
-			slidesPerView: 2,
-			spaceBetween: 20,
+		*/
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 25,
+		autoHeight: true,
+		speed: 800,
+		//touchRatio: 0,
+		//simulateTouch: false,
+		loop: true,
+		//preloadImages: false,
+		lazy: true,
+		autoplay: {
+			delay: 2000,
 		},
-		992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
+		// Dotts
+		pagination: {
+			el: '.slider-main__dotts',
+			clickable: true,
 		},
-		1268: {
-			slidesPerView: 4,
-			spaceBetween: 30,
+		// Arrows
+		// navigation: {
+		// 	nextEl: '.about__more .more__item_next',
+		// 	prevEl: '.about__more .more__item_prev',
+		// },
+		/*
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				autoHeight: true,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1268: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
 		},
-	},
-	*/
-	on: {
-		lazyImageReady: function () {
-			ibg();
-		},
-	}
-	// And if we need scrollbar
-	//scrollbar: {
-	//	el: '.swiper-scrollbar',
-	//},
-});
+		*/
+		on: {
+			lazyImageReady: function () {
+				ibg();
+			},
+		}
+		// And if we need scrollbar
+		//scrollbar: {
+		//	el: '.swiper-scrollbar',
+		//},
+	});
+}
+
+// if (document.querySelector('.main-slider')) { //=====> Проверка на блок в котором есть слайдер
+// 	let sliderMainBody = new Swiper('.slider-main__body', {
+// 		/*
+// 		effect: 'fade',
+// 		autoplay: {
+// 			delay: 3000,
+// 			disableOnInteraction: false,
+// 		},
+// 		*/
+// 		observer: true,
+// 		observeParents: true,
+// 		slidesPerView: 1,
+// 		spaceBetween: 0,
+// 		autoHeight: true,
+// 		speed: 800,
+// 		//touchRatio: 0,
+// 		//simulateTouch: false,
+// 		//loop: true,
+// 		//preloadImages: false,
+// 		lazy: true,
+// 		////==============> Dotts
+// 		pagination: {
+// 			el: '.slider-main__dotts',
+// 			clickable: true, //===> включает нажатие на кнопки
+// 			dynamicBullets: true, // булеты меняют размер (выбранный самый большой)
+// 		},
+// 		//==============> Arrows
+// 		// navigation: {
+// 		// 	nextEl: '.about__more .more__item_next',
+// 		// 	prevEl: '.about__more .more__item_prev',
+// 		// },
+// 		/*
+// 		//==============> breakpoints
+// 		breakpoints: {
+// 			320: {
+// 				slidesPerView: 1,
+// 				spaceBetween: 0,
+// 				autoHeight: true,
+// 			},
+// 			768: {
+// 				slidesPerView: 2,
+// 				spaceBetween: 20,
+// 			},
+// 			992: {
+// 				slidesPerView: 3,
+// 				spaceBetween: 20,
+// 			},
+// 			1268: {
+// 				slidesPerView: 4,
+// 				spaceBetween: 30,
+// 			},
+// 		},
+// 		*/
+// 		on: {
+// 			lazyImageReady: function () {
+// 				ibg();
+// 			},
+// 		}
+// 		// And if we need scrollbar
+// 		//scrollbar: {
+// 		//	el: '.swiper-scrollbar',
+// 		//},
+// 	});
+// }

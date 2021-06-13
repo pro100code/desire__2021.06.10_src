@@ -1,0 +1,147 @@
+.new-collection {
+	@media (min-width: $md1+px) {
+		padding: 130px 0 115px 0;
+	}
+	@media (max-width: $md1+px) {
+		@include adaptiv-value("padding-top", 130, 30, 130);
+		@include adaptiv-value("padding-bottom", 115, 30, 115);
+	}
+	// .new-collection__heading
+	&__heading {
+		max-width: 730px;
+		margin: 0 auto;
+		text-align: center;
+		margin: 0px auto 50px auto;
+		@media (max-width: 1920px) {
+			@include adaptiv-value("margin-bottom", 50, 20, 50);
+		}
+	}
+	// .new-collection__title
+	&__title {
+		margin: 0px 0px 20px 0px;
+		&::before {
+			right: 0;
+			margin: 0 auto;
+			width: 252px;
+			background: $c-grey-6D7278;
+		}
+		@media (max-width: $md1+px) {
+			@include adaptiv-value("margin-bottom", 20, 10, 20);
+		}
+	}
+	// .new-collection__subtitle
+	&__subtitle {
+	}
+	// .new-collection__collections
+	&__collections {
+	}
+}
+
+.collections {
+	// .collections__row
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -10px;
+		@media (max-width: 1300px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	// .collections__item
+	&__item {
+		position: relative;
+		cursor: pointer;
+		// pointer-events: none;
+		@media (min-width: $md2+px) {
+			&:hover {
+				pointer-events: all;
+				.collections__column_hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	// .collections__column
+	&__column {
+		flex: 0 1 20%;
+		max-width: 350px;
+		max-height: 350px;
+		padding: 0 10px;
+		@media (max-width: 1300px) {
+			flex: 0 1 33.333%;
+			margin: 0px 0px 20px 0px;
+		}
+		@media (max-width: $md3+px) {
+			flex: 0 1 50%;
+			&:last-child {
+				margin: 0;
+			}
+		}
+		@media (max-width: $md4+px) {
+			flex: 0 1 100%;
+		}
+		// .collections__column_bg
+		&_bg {
+			padding: 50%;
+			max-width: 350px;
+			max-height: 350px;
+			position: relative;
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				max-width: 350px;
+				max-height: 350px;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+		}
+		// .collections__column_hover
+		&_hover {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			background: rgba($c-white, 0.6);
+			opacity: 0;
+			transition: all 0.3s ease 0s;
+		}
+		// .collections__column__heading
+		&__heading {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			@media (max-width: $md2+px) {
+				pointer-events: none;
+			}
+		}
+	}
+
+	// .collections__title
+	&__title {
+		@media (max-width: $md3+px) {
+			@include adaptiv-font(20, 18, 20);
+		}
+	}
+	// .collections__subtitle
+	&__subtitle {
+		font-size: 14px;
+		font-weight: 600;
+		@media (max-width: $md3+px) {
+			@include adaptiv-font(14, 12, 14);
+		}
+	}
+}
+
+html._touch .collections__column._active .collections__item .collections__column_hover {
+	opacity: 1;
+	.collections__column__heading {
+		pointer-events: all;
+	}
+}

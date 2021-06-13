@@ -6,7 +6,6 @@ body {
 	font-weight: 400;
 	line-height: 27 / 16 * 100%;
 	color: $c-grey-5A5A5A;
-	overflow: hidden;
 	&._lock {
 		overflow: hidden;
 	}
@@ -42,15 +41,27 @@ body {
 	}
 	// ._container_fluid
 	&_fluid {
-		// max-width: $maxWidth + 30px;
-		// margin: 0 auto;
-		// padding: 0 15px;
-		// outline: 1px solid red;
+		max-width: $maxWidth;
+		margin: 0 auto;
+	}
+	// ._container_big
+	&_big {
+		margin: 0 auto;
+		@media (min-width: $maxWidth+px) {
+			max-width: $maxWidth - 30px;
+		}
+		@media (max-width: $maxWidth+px) {
+			padding: 0 10px;
+		}
 	}
 }
 
 // класс на телефонах
 ._touch {
+}
+
+.heading-section {
+	// text-align: center;
 }
 
 // Заголовки
@@ -68,12 +79,12 @@ body {
 			content: "";
 			position: absolute;
 			left: 0;
-			right: 0;
 			bottom: 0;
-			width: 252px;
 			height: 1px;
-			margin: 0 auto;
 			background: $c-grey-979797;
+		}
+		@media (max-width: $md1+px) {
+			@include adaptiv-font(36, 30, 36);
 		}
 	}
 	// .title_block
@@ -81,9 +92,11 @@ body {
 	}
 	// .title_item
 	&_item {
-		font-size: 16px;
+		font-family: $f-Montserrat;
+		font-size: 20px;
 		font-weight: 700;
-		line-height: 23 / 16 * 100%;
+		line-height: 24 / 20 * 100%;
+		color: $c-grey-363838;
 	}
 	// .title_paragraph
 	&_paragraph {
@@ -91,6 +104,9 @@ body {
 }
 
 .subtitle {
+	// .subtitle_section
+	&_section {
+	}
 }
 
 // text
@@ -305,43 +321,6 @@ body.ie {
 //====================================================================================================
 #map {
 	background: url("../img/icons/loading.gif") center / 50px no-repeat;
-}
-//====================================================================================================
-._swiper {
-	overflow: hidden;
-	//.swiper-wrapper
-	.swiper-wrapper {
-		width: 100%;
-		height: 100%;
-		box-sizing: content-box;
-		display: flex;
-		position: relative;
-	}
-	&.swiper-container-vertical {
-		.swiper-wrapper {
-			flex-direction: column;
-		}
-	}
-	&.swiper-container-autoheight {
-		.swiper-wrapper {
-			align-items: flex-start;
-		}
-	}
-}
-.swiper-container-initialized {
-	.swiper-slide {
-		flex-shrink: 0;
-		// transition-property: transform;
-	}
-}
-.swiper-container-android {
-	.swiper-slide,
-	.swiper-wrapper {
-		transform: translate3d(0px, 0, 0);
-	}
-}
-.swiper-button-lock {
-	display: none !important;
 }
 //====================================================================================================
 ._tabs {

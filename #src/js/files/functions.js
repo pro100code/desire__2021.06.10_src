@@ -11,6 +11,16 @@ if (isIE()) {
 }
 if (isMobile.any()) {
 	document.querySelector('html').classList.add('_touch');
+
+	let collectionsItems = document.querySelectorAll('.collections__item');
+	if (collectionsItems.length > 0) {
+		for (let index = 0; index < collectionsItems.length; index++) {
+			const collectionsItem = collectionsItems[index];
+			collectionsItem.addEventListener("click", function () {
+				collectionsItem.parentElement.classList.toggle('_active');
+			});
+		}
+	}
 }
 
 function testWebP(callback) {

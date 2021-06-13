@@ -7,9 +7,26 @@
 	// ===> добавляется к нашим кнопкам (для стилизации dotts )
 	// .swiper-pagination-bullet
 	&-pagination-bullet {
+		height: 8px;
+		width: 8px;
+		background: $c-grey-363838;
+		border-radius: 50%;
+		@media (min-width: $maxWidth+px) {
+			margin: 0px 29px 0px 0px;
+			&:last-child {
+				margin: 0;
+			}
+		}
+		@media (max-width: $maxWidth+px) {
+			@include adaptiv-value("margin-right", 29, 15, 29);
+			&:last-child {
+				margin: 0;
+			}
+		}
 		// .swiper-pagination-bullet-active
 		&-active {
 			// => активная точка
+			background: $c-yellow-FFEF35;
 		}
 	}
 	// ===> цифры подсчета слайдов страницами
