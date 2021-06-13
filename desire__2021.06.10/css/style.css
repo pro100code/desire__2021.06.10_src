@@ -1713,6 +1713,37 @@ html._touch .collections__column._active .collections__item .collections__column
   color: #5a5a5a;
 }
 
+.blog-box {
+  padding: 40px 0px 75px 0px;
+}
+
+.blog-box__title {
+  max-width: 430px;
+  margin: 0px auto 29px auto;
+  text-align: center;
+}
+
+.blog-box__img-link {
+  margin: 0px 0px 20px 0px;
+}
+
+.blog-box__img-link img {
+  max-width: 100%;
+}
+
+.blog-box__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0px 0px 7px 0px;
+}
+
+.blog-box__item-title {
+  display: block;
+}
+
 @media (min-width: 480px) {
   .contact-footer__form {
     display: -webkit-box;
@@ -1913,6 +1944,37 @@ html._touch .collections__column._active .collections__item .collections__column
   .rightside__close::after {
     bottom: 0;
   }
+
+  .blog-box__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 -15px;
+  }
+
+  .blog-box__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    min-height: 100%;
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .blog-box__nav {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
 }
 
 @media (min-width: 992px) {
@@ -2049,6 +2111,15 @@ html._touch .collections__column._active .collections__item .collections__column
 
   .new-collection__heading {
     margin-bottom: calc(20px + 30 * ((100vw - 320px) / 1600));
+  }
+
+  .blog-box {
+    padding-top: calc(0px + 40 * ((100vw - 320px) / 1600));
+    padding-bottom: calc(30px + 45 * ((100vw - 320px) / 1600));
+  }
+
+  .blog-box__title {
+    margin-bottom: calc(15px + 14 * ((100vw - 320px) / 1600));
   }
 }
 
@@ -2187,6 +2258,33 @@ html._touch .collections__column._active .collections__item .collections__column
 
   .collections__subtitle {
     font-size: calc(12px + 2 * ((100vw - 320px) / 1600));
+  }
+
+  .blog-box__item:nth-child(1) {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .blog-box__img-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .blog-box__nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .blog-box__item-title h4 {
+    max-width: 540px;
+    margin: 0 auto;
   }
 }
 
