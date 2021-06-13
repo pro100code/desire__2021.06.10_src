@@ -6,7 +6,7 @@
 	._icon-works_icon-3 {
 		&::before {
 			font-weight: 700;
-			color: $c-black-363838;
+			color: $c-grey-363838;
 		}
 	}
 	// .works__title
@@ -31,7 +31,7 @@
 				left: 0;
 				bottom: 0;
 				transform: translate(-50%, 50%);
-				background: $c-black-363838;
+				background: $c-grey-363838;
 				border-radius: 50%;
 			}
 		}
@@ -51,7 +51,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				border-top: 1px solid $c-black-363838;
+				border-top: 1px solid $c-grey-363838;
 			}
 		}
 	}
@@ -74,7 +74,7 @@
 					position: absolute;
 					height: 20px;
 					width: 1px;
-					background: $c-black-363838;
+					background: $c-grey-363838;
 				}
 			}
 		}
