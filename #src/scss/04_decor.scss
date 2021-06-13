@@ -9,6 +9,9 @@
 			}
 		}
 	}
+	@media (max-width: $md1+px) {
+		@include adaptiv-value("margin-bottom", 70, 30, 70);
+	}
 	// .decor__image
 	&__image {
 		position: absolute;

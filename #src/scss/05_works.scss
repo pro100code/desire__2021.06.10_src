@@ -11,6 +11,7 @@
 	}
 	// .works__title
 	&__title {
+		text-align: center;
 		@media (max-width: 600px) {
 			margin: 0px 0px 30px 0px;
 		}
@@ -108,10 +109,14 @@
 	}
 	// .works__item-image
 	&__item-image {
+		font-size: 30px;
+		font-weight: 900;
 		margin: 0px 10px 0px 0px;
 	}
 	// .works__item-title
 	&__item-title {
+		font-size: 16px;
+		line-height: 23 / 16 * 100%;
 	}
 	// .works__item-text
 	&__item-text {

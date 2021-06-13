@@ -26,7 +26,49 @@
 }
 
 // изменить эти классы под нужный проект из css
-// ===> Пример
 ._icon-close:before {
 	content: "\e907";
+}
+._icon-header__icon_menu:before {
+	content: "\e902";
+}
+._icon-works_icon-1:before {
+	content: "\e908";
+}
+._icon-works_icon-2:before {
+	content: "\e909";
+}
+._icon-works_icon-3:before {
+	content: "\e90a";
+}
+._icon-about_play:before {
+	content: "\e90b";
+}
+._icon-blog__search:before {
+	content: "\e90c";
+	color: #5a5a5a;
+}
+
+//===> Social
+._icon-footer__envelope:before {
+	content: "\e900";
+}
+._icon-footer__facebook:before {
+	content: "\e901";
+}
+._icon-footer__instagram:before {
+	content: "\e903";
+}
+._icon-footer__Pinterest:before {
+	content: "\e904";
+}
+._icon-footer__whatsapp:before {
+	content: "\e905";
+}
+._icon-footer__youtube:before {
+	content: "\e906";
+}
+._icon-footer__twitter:before {
+	content: "\e90d";
+	color: #5a5a5a;
 }

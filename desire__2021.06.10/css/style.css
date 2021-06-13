@@ -4,6 +4,98 @@
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700&display=swap");
 
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2#icons") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]:before,
+[class*=" _icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="_icon-"]:before,
+[class*=" _icon-"]:before {
+  display: inline-block;
+}
+
+._icon-close:before {
+  content: "\e907";
+}
+
+._icon-header__icon_menu:before {
+  content: "\e902";
+}
+
+._icon-works_icon-1:before {
+  content: "\e908";
+}
+
+._icon-works_icon-2:before {
+  content: "\e909";
+}
+
+._icon-works_icon-3:before {
+  content: "\e90a";
+}
+
+._icon-about_play:before {
+  content: "\e90b";
+}
+
+._icon-blog__search:before {
+  content: "\e90c";
+  color: #5a5a5a;
+}
+
+._icon-footer__envelope:before {
+  content: "\e900";
+}
+
+._icon-footer__facebook:before {
+  content: "\e901";
+}
+
+._icon-footer__instagram:before {
+  content: "\e903";
+}
+
+._icon-footer__Pinterest:before {
+  content: "\e904";
+}
+
+._icon-footer__whatsapp:before {
+  content: "\e905";
+}
+
+._icon-footer__youtube:before {
+  content: "\e906";
+}
+
+._icon-footer__twitter:before {
+  content: "\e90d";
+  color: #5a5a5a;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -1585,6 +1677,10 @@ html._touch .collections__column._active .collections__item .collections__column
   color: #363838;
 }
 
+.works__title {
+  text-align: center;
+}
+
 .works__item {
   max-width: 250px;
   margin: 0px 0px 20px 0px;
@@ -1601,7 +1697,14 @@ html._touch .collections__column._active .collections__item .collections__column
 }
 
 .works__item-image {
+  font-size: 30px;
+  font-weight: 900;
   margin: 0px 10px 0px 0px;
+}
+
+.works__item-title {
+  font-size: 16px;
+  line-height: 143.75%;
 }
 
 .works__item-text {
@@ -2029,6 +2132,10 @@ html._touch .collections__column._active .collections__item .collections__column
 
   .new-collection__title {
     margin-bottom: calc(10px + 10 * ((100vw - 320px) / 1600));
+  }
+
+  .decor {
+    margin-bottom: calc(30px + 40 * ((100vw - 320px) / 1600));
   }
 }
 
