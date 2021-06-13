@@ -1713,6 +1713,109 @@ html._touch .collections__column._active .collections__item .collections__column
   color: #5a5a5a;
 }
 
+.gallery {
+  padding: 40px 0 80px 0;
+}
+
+.gallery__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 0px 40px 0px;
+}
+
+.gallery__btn {
+  margin: 0 13px;
+  padding: 6px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 200%;
+  color: #8f8d8d;
+  outline: none;
+  background: transparent;
+  border: 1px solid rgba(69, 70, 71, 0.5);
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+
+.gallery__btn.mixitup-control-active {
+  color: #363838;
+  background: rgba(255, 239, 53, 0.5);
+  border: 1px solid rgba(54, 56, 56, 0.5);
+}
+
+.gallery__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px 35px;
+}
+
+.gallery__item:nth-child(1) {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  max-height: 1148px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery-spoller__title {
+  padding: 0px 0px 0px 10px;
+  position: relative;
+  width: 100%;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  margin: 0px 0px 20px 0px;
+}
+
+.gallery-spoller__btn._init .gallery-spoller__title::before,
+.gallery-spoller__btn._init .gallery-spoller__title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #363838;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  z-index: 1;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.gallery-spoller__btn._init .gallery-spoller__title::after {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.gallery-spoller__btn._init .gallery-spoller__title._active::after {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 .blog-box {
   padding: 40px 0px 75px 0px;
 }
@@ -2208,6 +2311,11 @@ html._touch .collections__column._active .collections__item .collections__column
   .decor {
     margin-bottom: calc(30px + 40 * ((100vw - 320px) / 1600));
   }
+
+  .gallery {
+    padding-top: calc(20px + 20 * ((100vw - 320px) / 1600));
+    padding-bottom: calc(20px + 60 * ((100vw - 320px) / 1600));
+  }
 }
 
 @media (max-width: 992px) {
@@ -2225,6 +2333,25 @@ html._touch .collections__column._active .collections__item .collections__column
 
   .collections__column__heading {
     pointer-events: none;
+  }
+
+  .gallery__items {
+    grid-gap: 10px 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery__buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 0 20px 0;
+  }
+
+  .gallery__btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33.333%;
+            flex: 0 1 33.333%;
+    margin: 0px 5px 10px 5px;
   }
 }
 
@@ -2258,6 +2385,10 @@ html._touch .collections__column._active .collections__item .collections__column
 
   .collections__subtitle {
     font-size: calc(12px + 2 * ((100vw - 320px) / 1600));
+  }
+
+  .gallery__items {
+    grid-gap: 5px 5px;
   }
 
   .blog-box__item:nth-child(1) {
@@ -2507,6 +2638,15 @@ html._touch .collections__column._active .collections__item .collections__column
   }
 }
 
+@media (max-width: 580px) {
+  .gallery__btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
+    margin: 0px 5px 10px 5px;
+  }
+}
+
 @media (max-width: 480px) {
   .button {
     width: 140px;
@@ -2534,6 +2674,14 @@ html._touch .collections__column._active .collections__item .collections__column
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
+  }
+}
+
+@media (max-width: 440px) {
+  .gallery__btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 90%;
+            flex: 0 1 90%;
   }
 }
 

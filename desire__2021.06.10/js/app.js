@@ -929,6 +929,15 @@ if (document.querySelector('.main-slider')) {
 	});
 }
 
+if (document.querySelector('.gallery')) {
+	// MixItUp
+	var mixer = mixitup('.gallery__inner', {
+		load: {
+			filter: '.living'
+		}
+	});
+}
+
 // if (document.querySelector('.main-slider')) { //=====> Проверка на блок в котором есть слайдер
 // 	let sliderMainBody = new Swiper('.slider-main__body', {
 // 		/*

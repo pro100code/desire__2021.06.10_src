@@ -1,0 +1,133 @@
+.gallery {
+	padding: 40px 0 80px 0;
+	@media (max-width: $md1+px) {
+		@include adaptiv-value("padding-top", 40, 20, 40);
+		@include adaptiv-value("padding-bottom", 80, 20, 80);
+	}
+	// .gallery__buttons
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0px 0px 40px 0px;
+		@media (max-width: 900px) {
+			flex-wrap: wrap;
+			margin: 0 0 20px 0;
+		}
+	}
+	// .gallery__btn
+	&__btn {
+		margin: 0 13px;
+		padding: 6px 16px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 28 / 14 * 100%;
+		color: $c-grey-8F8D8D;
+		outline: none;
+		background: transparent;
+		border: 1px solid rgba($c-grey-454647, 0.5);
+		border-radius: 20px;
+		cursor: pointer;
+		transition: all 0.7s ease 0s;
+		&.mixitup-control-active {
+			color: $c-grey-363838;
+			background: rgba($c-yellow-FFEF35, 0.5);
+			border: 1px solid rgba($c-grey-363838, 0.5);
+		}
+		@media (max-width: 900px) {
+			flex: 0 1 33.333%;
+			// max-width: 185px;
+			margin: 0px 5px 10px 5px;
+		}
+		@media (max-width: 580px) {
+			flex: 0 1 45%;
+			margin: 0px 5px 10px 5px;
+		}
+		@media (max-width: 440px) {
+			flex: 0 1 90%;
+		}
+	}
+	// .gallery__inner
+	&__inner {
+	}
+	// .gallery__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-gap: 30px 35px;
+		@media (max-width: $md2+px) {
+			grid-gap: 10px 15px;
+		}
+		@media (max-width: $md3+px) {
+			grid-gap: 5px 5px;
+		}
+	}
+	// .gallery__item
+	&__item {
+		// display: block;
+		&:nth-child(1) {
+			grid-column: span 2;
+			grid-row: span 2;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			max-height: 1148px;
+			object-fit: cover;
+		}
+	}
+	// Alien CLASS ===> gallery-page
+	// .gallery-page {
+	// 	.gallery {
+	// 		&__items {
+	// 			grid-gap: 10px;
+	// 		}
+	// 		&__item {
+	// 			&:nth-child(8) {
+	// 				grid-column: span 2;
+	// 				grid-row: span 2;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+
+.gallery-spoller {
+	// .gallery-spoller__btn
+	&__btn {
+	}
+	// .gallery-spoller__item
+	&__item {
+	}
+	// .gallery-spoller__title
+	&__title {
+		padding: 0px 0px 0px 10px;
+		position: relative;
+		width: 100%;
+		text-align-last: left;
+		margin: 0px 0px 20px 0px;
+	}
+	// .gallery-spoller__body
+	&__body {
+	}
+	// Alien CLASS ===> Кнопки для спойлера
+	&__btn._init &__title::before,
+	&__btn._init &__title::after {
+		content: "";
+		width: 20px;
+		height: 1px;
+		background-color: $c-grey-363838;
+		position: absolute;
+		right: 20px;
+		top: 12px;
+		z-index: 1;
+		transition: transform 0.3s ease 0s;
+	}
+	&__btn._init &__title::after {
+		transform: rotate(-90deg);
+	}
+	&__btn._init &__title._active::after {
+		transform: rotate(0deg);
+	}
+}
