@@ -41,7 +41,7 @@ body {
 	}
 	// ._container_fluid
 	&_fluid {
-		max-width: $maxWidth;
+		max-width: $maxWidth + px;
 		margin: 0 auto;
 	}
 	// ._container_big

@@ -28,6 +28,9 @@
 			@include adaptiv-value("padding-left", 20, 5, 20);
 			@include adaptiv-value("padding-right", 20, 5, 20);
 		}
+		@media (max-width: $md3+px) {
+			padding: 0 30px;
+		}
 		@media (min-width: 600px) {
 			height: 70px;
 		}

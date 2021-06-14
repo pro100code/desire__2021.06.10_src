@@ -1,18 +1,28 @@
 .breadcrumbs {
+	width: 100%;
+	height: 55px;
+	max-width: $maxWidth + px;
+	margin: 0 auto;
+	position: fixed;
+	top: 120px;
+	left: 0;
+	right: 0;
+	background: rgba($c-grey-DFDFDF, 0.5);
+	@media (max-width: $md1+px) {
+		height: 40px;
+		top: 70px;
+	}
+	@media (max-width: 600px) {
+		top: 50px;
+	}
 	// .breadcrumbs__menu
 	&__menu {
 		display: flex;
 		align-items: center;
 		width: 100%;
-		max-width: $maxWidth;
+		max-width: $maxWidthContainer + 90px;
 		height: 55px;
 		padding: 0 15px;
-		margin: 0 auto;
-		position: fixed;
-		top: 120px;
-		left: 0;
-		right: 0;
-		background: rgba($c-grey-DFDFDF, 0.5);
 		@media (max-width: $md1+px) {
 			height: 40px;
 			top: 70px;
