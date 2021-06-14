@@ -51,7 +51,6 @@
 	// .collections__item
 	&__item {
 		position: relative;
-		cursor: pointer;
 		// pointer-events: none;
 		@media (min-width: $md2+px) {
 			&:hover {
@@ -117,7 +116,10 @@
 		}
 		// .collections__column__heading
 		&__heading {
-			text-align: center;
+			cursor: pointer;
+			@media (min-width: $md2+px) {
+				text-align: center;
+			}
 			@media (max-width: $md2+px) {
 				pointer-events: none;
 			}

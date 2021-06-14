@@ -1520,7 +1520,6 @@ textarea.input {
 
 .collections__item {
   position: relative;
-  cursor: pointer;
 }
 
 .collections__column {
@@ -1579,7 +1578,7 @@ textarea.input {
 }
 
 .collections__column__heading {
-  text-align: center;
+  cursor: pointer;
 }
 
 .collections__subtitle {
@@ -2115,6 +2114,10 @@ html._touch .decor._active .decor__heading {
 
   .collections__item:hover .collections__column_hover {
     opacity: 1;
+  }
+
+  .collections__column__heading {
+    text-align: center;
   }
 
   .decor:hover .decor__heading {
