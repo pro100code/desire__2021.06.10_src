@@ -1551,20 +1551,6 @@ textarea.input {
 }
 
 .collections__column_hover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.6);
-  opacity: 0;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.collections__column__heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1579,6 +1565,21 @@ textarea.input {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.collections__column__heading {
+  text-align: center;
 }
 
 .collections__subtitle {
@@ -1641,7 +1642,7 @@ html._touch .collections__column._active .collections__item .collections__column
   position: relative;
   font-family: "Montserrat";
   font-size: 60px;
-  line-height: 80px;
+  line-height: 133.33333%;
   color: #363838;
 }
 
@@ -1668,6 +1669,10 @@ html._touch .collections__column._active .collections__item .collections__column
 
 .decor__subtitle span {
   display: block;
+}
+
+html._touch .decor._active .decor__heading {
+  opacity: 1;
 }
 
 .works ._icon-works_icon-1::before,
@@ -2341,6 +2346,19 @@ html._touch .collections__column._active .collections__item .collections__column
     pointer-events: none;
   }
 
+  .decor__heading {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: calc(10px + 12 * ((100vw - 320px) / 1600));
+  }
+
+  .decor__title {
+    font-size: calc(25px + 35 * ((100vw - 320px) / 1600));
+    margin-bottom: calc(10px + 12 * ((100vw - 320px) / 1600));
+    padding-bottom: calc(10px + 12 * ((100vw - 320px) / 1600));
+  }
+
   .gallery__items {
     grid-gap: 10px 15px;
   }
@@ -2650,6 +2668,12 @@ html._touch .collections__column._active .collections__item .collections__column
         -ms-flex: 0 1 45%;
             flex: 0 1 45%;
     margin: 0px 5px 10px 5px;
+  }
+}
+
+@media (max-width: 550px) {
+  .decor__subtitle {
+    display: none;
   }
 }
 

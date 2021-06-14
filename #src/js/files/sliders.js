@@ -136,6 +136,7 @@ if (document.querySelector('.gallery')) {
 	});
 }
 
+
 // if (document.querySelector('.main-slider')) { //=====> Проверка на блок в котором есть слайдер
 // 	let sliderMainBody = new Swiper('.slider-main__body', {
 // 		/*

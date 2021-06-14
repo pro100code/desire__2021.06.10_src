@@ -21,6 +21,14 @@ if (isMobile.any()) {
 			});
 		}
 	}
+
+	if (document.querySelector('.decor')) {
+		let decor = document.querySelector(".decor");
+		let menuBody = document.querySelector(".decor__heading");
+		decor.addEventListener("click", function () {
+			menuBody.parentElement.classList.toggle('_active');
+		});
+	}
 }
 
 function testWebP(callback) {

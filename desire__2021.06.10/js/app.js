@@ -24,6 +24,14 @@ if (isMobile.any()) {
 			});
 		}
 	}
+
+	if (document.querySelector('.decor')) {
+		let decor = document.querySelector(".decor");
+		let menuBody = document.querySelector(".decor__heading");
+		decor.addEventListener("click", function () {
+			menuBody.parentElement.classList.toggle('_active');
+		});
+	}
 }
 
 function testWebP(callback) {
@@ -937,6 +945,7 @@ if (document.querySelector('.gallery')) {
 		}
 	});
 }
+
 
 // if (document.querySelector('.main-slider')) { //=====> Проверка на блок в котором есть слайдер
 // 	let sliderMainBody = new Swiper('.slider-main__body', {
