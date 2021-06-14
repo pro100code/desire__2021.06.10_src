@@ -227,6 +227,11 @@ body a {
   margin: 0 auto;
 }
 
+._container_breadcrumbs {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .title {
   font-family: "Montserrat";
   color: #363838;
@@ -1851,6 +1856,44 @@ html._touch .decor._active .decor__heading {
   display: block;
 }
 
+.breadcrumbs__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1920;
+  height: 55px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+  background: rgba(223, 223, 223, 0.5);
+}
+
+.breadcrumbs__item::after {
+  content: "/";
+  margin: 0px 3px 0px -2px;
+}
+
+.breadcrumbs__item:last-child::after {
+  display: none;
+}
+
+.breadcrumbs__link {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+html._touch .breadcrumbs__link:active {
+  color: #b5930f;
+}
+
 @media (min-width: 440px) {
   .gallery-spoller__title {
     display: none;
@@ -2123,6 +2166,10 @@ html._touch .decor._active .decor__heading {
   .decor:hover .decor__heading {
     opacity: 1;
   }
+
+  .breadcrumbs__link:hover {
+    color: #b5930f;
+  }
 }
 
 @media (min-width: 1152px) {
@@ -2329,6 +2376,11 @@ html._touch .decor._active .decor__heading {
   .gallery {
     padding-top: calc(20px + 20 * ((100vw - 320px) / 1600));
     padding-bottom: calc(20px + 60 * ((100vw - 320px) / 1600));
+  }
+
+  .breadcrumbs__menu {
+    height: 40px;
+    top: 70px;
   }
 }
 
@@ -2648,6 +2700,10 @@ html._touch .decor._active .decor__heading {
 
   .works__item_line-bottom {
     margin-left: auto;
+  }
+
+  .breadcrumbs__menu {
+    top: 50px;
   }
 }
 

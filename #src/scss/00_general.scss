@@ -54,6 +54,10 @@ body {
 			padding: 0 10px;
 		}
 	}
+	&_breadcrumbs {
+		max-width: $maxWidthContainer + 60 + px;
+		margin: 0 auto;
+	}
 }
 
 // класс на телефонах
