@@ -41,6 +41,8 @@ git merge 'название ветки'
 git clone ссылка на сайт                                                               !- скачует ветку master 
 git pull origin название ветки                                                         !- переход на нужную ветку
 
+git push origin --delete <branchName> - удаление ветки с сайта GitHub 
+
 ---> основные команды
 clear - почистить консоль
 q - выход 
