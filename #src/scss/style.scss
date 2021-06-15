@@ -12,19 +12,18 @@
 @import "00_forms";
 @import "00_sliders";
 
-@import "01_header";
-@import "01_rightside";
-@import "01_main";
+@import "01__header";
+@import "01__rightside";
+@import "01__main";
 @import "99_footer";
 @import "popup";
 
-@import "02_slider-main";
-@import "03_new-collection";
-@import "04_decor";
-@import "05_works";
-@import "06_gallery";
-@import "07_blog-box";
-
+@import "01_index_02__slider-main";
+@import "01_index_03__new-collection";
+@import "01_index_04__decor";
+@import "01_index_05__works";
+@import "01_index_06__gallery";
+@import "01_index_07__blog-box";
 // =====> style-footer
 
 // =====> about.html <========================================================================================================================================================
