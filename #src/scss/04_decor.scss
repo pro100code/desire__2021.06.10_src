@@ -1,7 +1,12 @@
+.decor-index {
+	margin: 0px 0px 70px 0px;
+	min-height: 200px;
+	max-height: 616px;
+}
+
 .decor {
 	position: relative;
-	padding: 15% 0;
-	margin: 0px 0px 70px 0px;
+	padding: 10.45% 0;
 	@media (min-width: $md2+px) {
 		&:hover {
 			.decor__heading {
@@ -35,34 +40,35 @@
 		background: rgba($c-white, 0.6);
 		transition: all 0.5s ease 0s;
 		opacity: 0;
-		@media (max-width: $md2+px) {
-			align-items: flex-start;
-			@include adaptiv-value("padding-left", 22, 10, 22);
+		// .decor__heading_index
+		&_index {
+			@media (max-width: $md2+px) {
+				align-items: flex-start;
+				@include adaptiv-value("padding-left", 22, 10, 22);
+			}
 		}
 	}
 	// .decor__title
 	&__title {
 		padding: 0px 0px 22px 0px;
 		margin: 0px 0px 22px 0px;
-		position: relative;
-		font-family: $f-Montserrat;
-		font-size: 60px;
-		line-height: 80 / 60 * 100%;
-		color: $c-grey-363838;
 		span {
 			display: block;
 		}
-		&::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 200px;
-			height: 1px;
-			background: $c-grey-5A5A5A;
+		// .decor__title_index
+		&_index {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 200px;
+				height: 1px;
+				background: $c-grey-5A5A5A;
+			}
 		}
 		@media (max-width: $md2+px) {
-			@include adaptiv-font(60, 25, 60);
 			@include adaptiv-value("margin-bottom", 22, 10, 22);
 			@include adaptiv-value("padding-bottom", 22, 10, 22);
 		}

@@ -105,6 +105,16 @@ body {
 	// .title_paragraph
 	&_paragraph {
 	}
+	// .title_big
+	&_big {
+		font-family: $f-Montserrat;
+		font-size: 60px;
+		line-height: 80 / 60 * 100%;
+		color: $c-grey-363838;
+		@media (max-width: $md2+px) {
+			@include adaptiv-font(60, 25, 60);
+		}
+	}
 }
 
 .subtitle {
