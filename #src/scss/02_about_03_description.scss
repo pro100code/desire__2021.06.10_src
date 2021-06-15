@@ -36,7 +36,7 @@
 		max-width: 830px;
 		margin-left: auto;
 		@media (max-width: $md2+px) {
-			padding: 0px 0px 0px 30px;
+			@include adaptiv-value("padding-left", 30, 15, 30);
 		}
 	}
 	// .description-about__text

@@ -59,9 +59,16 @@
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
 		background-color: #fff;
-		padding: 50px;
+		padding: 0px;
 		width: 100%;
-		max-width: 800px;
+		max-height: 90%;
+		max-width: 70%;
+		@media (max-width: $md3+px) {
+			max-width: 80%;
+		}
+		@media (max-width: $md4+px) {
+			width: 90%;
+		}
 	}
 	// .popup__close
 	&__close {
