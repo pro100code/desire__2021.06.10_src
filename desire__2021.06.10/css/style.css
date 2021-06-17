@@ -1972,7 +1972,7 @@ html._touch .breadcrumbs__link:active {
   margin: 0;
 }
 
-.video-about {
+.video-about__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1987,6 +1987,7 @@ html._touch .breadcrumbs__link:active {
   width: 100%;
   min-height: 170px;
   max-height: 414px;
+  max-width: 1920px;
   position: relative;
 }
 
@@ -2145,6 +2146,42 @@ html._touch .breadcrumbs__link:active {
 
 .inspiration-about__text {
   margin: 0px 20px 0px 0px;
+}
+
+.partners {
+  padding: 15px 0;
+}
+
+.partners__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-height: 320px;
+}
+
+.partners__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+  padding: 0 10px;
+}
+
+.partners__image {
+  width: 100%;
+}
+
+.partners__image img {
+  max-width: 100%;
+}
+
+.collection-about {
+  padding: 54px 0 78px 0;
 }
 
 @media (min-width: 440px) {
@@ -2522,6 +2559,12 @@ html._touch .breadcrumbs__link:active {
   .slider-main__slide {
     padding: 0px 150px;
   }
+
+  .video-about {
+    width: 1920px;
+    height: 414px;
+    margin: 40px auto 90px auto;
+  }
 }
 
 @media (max-width: 1920px) {
@@ -2555,6 +2598,11 @@ html._touch .breadcrumbs__link:active {
 
   .blog-box__title {
     margin-bottom: calc(15px + 14 * ((100vw - 320px) / 1600));
+  }
+
+  .collection-about {
+    padding-top: calc(20px + 34 * ((100vw - 320px) / 1600));
+    padding-bottom: calc(25px + 53 * ((100vw - 320px) / 1600));
   }
 }
 
@@ -2668,7 +2716,7 @@ html._touch .breadcrumbs__link:active {
     margin-bottom: calc(10px + 15 * ((100vw - 320px) / 1600));
   }
 
-  .video-about {
+  .video-about__wrapper {
     margin-top: calc(20px + 20 * ((100vw - 320px) / 1600));
     margin-bottom: calc(30px + 60 * ((100vw - 320px) / 1600));
   }
@@ -2832,6 +2880,20 @@ html._touch .breadcrumbs__link:active {
   .video-about__link img {
     width: 25px;
     height: 25px;
+  }
+
+  .partners__row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .partners__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33.333%;
+            flex: 0 1 33.333%;
   }
 }
 

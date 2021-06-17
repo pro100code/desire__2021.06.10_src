@@ -1,0 +1,10 @@
+.collection-about {
+	padding: 54px 0 78px 0;
+	@media (max-width: 1920px) {
+		@include adaptiv-value("padding-top", 54, 20, 54);
+		@include adaptiv-value("padding-bottom", 78, 25, 78);
+	}
+	// .collection-about__row
+	&__row {
+	}
+}

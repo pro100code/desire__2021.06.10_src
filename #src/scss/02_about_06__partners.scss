@@ -1,0 +1,29 @@
+.partners {
+	padding: 15px 0;
+	// .partners__row
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-height: 320px;
+		@media (max-width: $md3+px) {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	}
+	// .partners__column
+	&__column {
+		flex: 0 1 20%;
+		padding: 0 10px;
+		@media (max-width: $md3+px) {
+			flex: 0 1 33.333%;
+		}
+	}
+	// .partners__image
+	&__image {
+		width: 100%;
+		img {
+			max-width: 100%;
+		}
+	}
+}
