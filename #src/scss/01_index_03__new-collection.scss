@@ -42,7 +42,6 @@
 	&__row {
 		display: flex;
 		justify-content: space-between;
-		margin: 0 -10px;
 		@media (max-width: 1300px) {
 			flex-wrap: wrap;
 			justify-content: center;

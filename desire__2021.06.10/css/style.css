@@ -1543,7 +1543,6 @@ textarea.input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 -10px;
 }
 
 .collections__item {
@@ -2182,6 +2181,11 @@ html._touch .breadcrumbs__link:active {
 
 .collection-about {
   padding: 54px 0 78px 0;
+}
+
+.collection-about__row {
+  margin: 0 auto;
+  max-width: 1920px;
 }
 
 @media (min-width: 440px) {
