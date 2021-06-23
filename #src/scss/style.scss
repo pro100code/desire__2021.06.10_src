@@ -1,10 +1,12 @@
 // =====> index.html <========================================================================================================================================================
 // =====> style-head
-@import "mixins";
+
+@import "00_01__mixsins_vars";
+// @import "mixins";
 @import "fonts__google";
 @import "fonts";
 @import "00_icons";
-@import "00_variables";
+// @import "00_variables";
 @import "00_null";
 @import "00_gallery__libs";
 

@@ -57,13 +57,19 @@
 				color: darken($c-yellow-F1D152, 25%);
 			}
 		}
-		// .breadcrumbs__link_about
-		&_about {
+		// .breadcrumbs__link_active
+		&_active {
+			font-size: 17px;
+			font-weight: 700;
+			color: darken($c-yellow-FFEF35, 20%);
 		}
 	}
 }
 
 .about-breadcrumbs {
+}
+
+.gallery-breadcrumbs {
 }
 
 html._touch .breadcrumbs__link {

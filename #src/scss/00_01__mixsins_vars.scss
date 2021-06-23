@@ -1,0 +1,123 @@
+//=====> Mixins <========================================================================================================================================================
+//---> Подключение шрифта
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+//---> Адаптивный шрифт
+@mixin adaptiv-font($pcSize, $mobSize, $maxSize) {
+	$addSize: $pcSize - $mobSize;
+	@if $maxSize==1 {
+		//Только если меньше контейнера
+		font-size: $pcSize + px;
+		@media (max-width: #{$maxWidthContainer + px}) {
+			font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $maxSize==2 {
+		//Только если больше контейнера
+		font-size: $pcSize + px;
+		@media (min-width: #{$maxWidthContainer + px}) {
+			font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//Всегда
+		font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+//---> Адаптивное свойство
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+	@if $type==1 {
+		//Только если меньше контейнера
+		#{$property}: $startSize + px;
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $type==2 {
+		//Только если больше контейнера
+		#{$property}: $startSize + px;
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//Всегда
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+//=====> Vars <========================================================================================================================================================
+//---> <font>--------------------------------------------------------------------------------------------------------------------------------------------------------------
+//---> шрифт по умолчанию (уже подключен)
+$fontFamily: "Open Sans";
+//---> перечисление других шрифтов
+$f-Montserrat: "Montserrat";
+
+//===> font-size по умолчанию
+$fontSize: 16;
+//---> Стили
+// </font>--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// <color>--------------------------------------------------------------------------------------------------------------------------------------------------------------
+$c-grey: grey;
+$c-grey-363838: #363838;
+$c-grey-454647: #454647;
+$c-grey-454545: #454545;
+$c-grey-707070: #707070;
+$c-grey-5A5A5A: #5a5a5a;
+$c-grey-6D7278: #6d7278;
+$c-grey-A1A1A1: #a1a1a1;
+$c-grey-8F8D8D: #8f8d8d;
+$c-grey-979797: #979797;
+$c-grey-DFDFDF: #dfdfdf;
+
+$c-white: white;
+$c-white-FFFFF0: #fffff0;
+
+$c-yellow: yellow;
+$c-yellow-FFEF35: #ffef35;
+$c-yellow-F1D152: #f1d152;
+
+$c-black: black;
+$c-red: red;
+$c-brown: brown;
+$c-orange: orange;
+$c-green: green;
+$c-blue: blue;
+$c-purple: purple;
+// </color>--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// <grid>--------------------------------------------------------------------------------------------------------------------------------------------------------------
+$minWidth: 320px;
+$maxWidth: 1920; // вписать ширину полотна
+$maxWidthContainer: 1140; // вписать ширину контейнера
+$md1: $maxWidthContainer + 12;
+$md2: 992;
+$md3: 768;
+$md4: 480;
+// </grid>--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//---> Активная ссылка главного меню
+%menu__link_active {
+	@media (max-width: 600px) {
+		color: darken($c-yellow-FFEF35, 20%);
+	}
+	@media (min-width: 600px) {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			bottom: -7px;
+			background: rgba($c-grey-363838, 0.7);
+		}
+	}
+}
