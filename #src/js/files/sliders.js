@@ -127,6 +127,92 @@ if (document.querySelector('.main-slider')) {
 	});
 }
 
+if (document.querySelector('.slider-contact')) {
+	let sliderContactBody = new Swiper('.slider-contact__body', {
+		/*
+		effect: 'fade',
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		*/
+		observer: true,
+		observeParents: true,
+		slidesPerView: 10,
+		spaceBetween: 25,
+		autoHeight: true,
+		speed: 800,
+		//touchRatio: 0,
+		//simulateTouch: false,
+		loop: true,
+		//preloadImages: false,
+		lazy: true,
+		autoplay: {
+			delay: 2000,
+		},
+		// Dotts
+		pagination: {
+			el: '.slider-contact__dotts',
+			clickable: true,
+		},
+		// Arrows
+		// navigation: {
+		// 	nextEl: '.about__more .more__item_next',
+		// 	prevEl: '.about__more .more__item_prev',
+		// },
+
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				autoHeight: true,
+			},
+			480: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+				autoHeight: true,
+			},
+			550: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+				autoHeight: true,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 10,
+			},
+			992: {
+				slidesPerView: 5,
+				spaceBetween: 10,
+			},
+			1500: {
+				slidesPerView: 7,
+				spaceBetween: 5,
+			},
+			1620: {
+				slidesPerView: 8,
+				spaceBetween: 5,
+			},
+			1920: {
+				slidesPerView: 10,
+				spaceBetween: 10,
+			},
+		},
+
+		on: {
+			lazyImageReady: function () {
+				ibg();
+			},
+		}
+		// And if we need scrollbar
+		//scrollbar: {
+		//	el: '.swiper-scrollbar',
+		//},
+	});
+}
+
+
+
 if (document.querySelector('.gallery')) {
 	// MixItUp
 	var mixer = mixitup('.gallery__inner', {
@@ -135,6 +221,7 @@ if (document.querySelector('.gallery')) {
 		}
 	});
 }
+
 
 
 // if (document.querySelector('.main-slider')) { //=====> Проверка на блок в котором есть слайдер

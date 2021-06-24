@@ -9,6 +9,9 @@
 		max-width: 430px;
 		margin: 0px auto 29px auto;
 		text-align: center;
+		&.title_section::before {
+			display: none;
+		}
 		@media (max-width: $maxWidth+px) {
 			@include adaptiv-value("margin-bottom", 29, 15, 29);
 		}

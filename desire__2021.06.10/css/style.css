@@ -927,6 +927,18 @@ textarea.input {
   background: #ffef35;
 }
 
+.sliders-dotts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 ._swiper {
   overflow: hidden;
 }
@@ -1505,18 +1517,6 @@ textarea.input {
   max-width: 110px;
 }
 
-.slider-main__dotts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .new-collection__heading {
   max-width: 730px;
   margin: 0 auto;
@@ -1877,6 +1877,10 @@ html._touch .decor._active .decor__heading {
   max-width: 430px;
   margin: 0px auto 29px auto;
   text-align: center;
+}
+
+.blog-box__title.title_section::before {
+  display: none;
 }
 
 .blog-box__img-link {
@@ -2323,6 +2327,16 @@ html._touch .breadcrumbs__link:active {
   width: 180px;
 }
 
+.slider-contact__body {
+  margin: 0px 0px 30px 0px;
+}
+
+.collections__wrapper-item {
+  margin: 0 auto;
+  max-width: 170px;
+  max-height: 170px;
+}
+
 @media (min-width: 440px) {
   .gallery-spoller__title {
     display: none;
@@ -2701,6 +2715,10 @@ html._touch .breadcrumbs__link:active {
   .description-about {
     padding: 100px 0 70px 0;
   }
+
+  .slider-contact {
+    padding: 50px 0 100px 0;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -2897,6 +2915,11 @@ html._touch .breadcrumbs__link:active {
     margin-bottom: calc(30px + 10 * ((100vw - 320px) / 1600));
     padding-bottom: calc(5px + 5 * ((100vw - 320px) / 1600));
   }
+
+  .slider-contact {
+    padding-top: calc(30px + 20 * ((100vw - 320px) / 1600));
+    padding-bottom: calc(40px + 60 * ((100vw - 320px) / 1600));
+  }
 }
 
 @media (max-width: 992px) {
@@ -2958,6 +2981,11 @@ html._touch .breadcrumbs__link:active {
 
   .inspiration-about__product img {
     max-width: 100%;
+  }
+
+  .collections__wrapper-item {
+    max-width: 250px;
+    max-height: 250px;
   }
 }
 
@@ -3378,6 +3406,11 @@ html._touch .breadcrumbs__link:active {
 
   .content-contact__input {
     margin: 0px 0px 13px 0px;
+  }
+
+  .collections__wrapper-item {
+    max-width: 350px;
+    max-height: 350px;
   }
 }
 
