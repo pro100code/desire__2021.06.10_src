@@ -81,10 +81,13 @@ body {
 		position: relative;
 		&::before {
 			content: "";
+			width: 100%;
+			max-width: 200px;
+			height: 1px;
 			position: absolute;
 			left: 0;
 			bottom: 0;
-			height: 1px;
+
 			background: $c-grey-979797;
 			border-radius: 1px;
 		}

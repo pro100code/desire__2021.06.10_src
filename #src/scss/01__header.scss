@@ -256,6 +256,13 @@
 			@extend %menu__link_active;
 		}
 	}
+	// .wrapper_contact
+	&_contact {
+		// Alien CLASS ===> .menu__link_gallery
+		.menu__link_сontact {
+			@extend %menu__link_active;
+		}
+	}
 }
 
 // класс на телефонах

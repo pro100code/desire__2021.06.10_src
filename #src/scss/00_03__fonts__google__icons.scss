@@ -1,0 +1,91 @@
+// Для Google Fonts
+// Ctrl + SHIFT + P ==> Google Fonts: Insert CSS @import ==> пишем название шрифта ==>
+// ==> завернуть в кавычки, все что в скобках ==> удалить ненужные начертания шрифтов ==>
+
+// ==> Добавить в конце строки google-шрифтов
+// &display=swap - для ускорения загрузки страницы (обязательно)
+// &subset=cyrillic-ext -  для подключения кирилицы
+
+// Пример удалить после подключения:
+// @import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext");
+
+// Open Sans Regular, Open Sans SemiBold, Open Sans Light Italic
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,regular,600&display=swap");
+// Montserrat Bold
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700&display=swap");
+
+//=====> Icons Font <========================================================================================================================================================
+@font-face {
+	font-family: "icons";
+	font-display: swap;
+	src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2#icons") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="_icon-"],
+[class*=" _icon-"] {
+	&:before {
+		@extend %ic;
+		display: inline-block;
+	}
+}
+
+// изменить эти классы под нужный проект из css
+._icon-close:before {
+	content: "\e907";
+}
+._icon-header__icon_menu:before {
+	content: "\e902";
+}
+._icon-works_icon-1:before {
+	content: "\e908";
+}
+._icon-works_icon-2:before {
+	content: "\e909";
+}
+._icon-works_icon-3:before {
+	content: "\e90a";
+}
+._icon-about_play:before {
+	content: "\e90b";
+}
+._icon-blog__search:before {
+	content: "\e90c";
+	color: #5a5a5a;
+}
+
+//===> Social
+._icon-footer__envelope:before {
+	content: "\e900";
+}
+._icon-footer__facebook:before {
+	content: "\e901";
+}
+._icon-footer__instagram:before {
+	content: "\e903";
+}
+._icon-footer__Pinterest:before {
+	content: "\e904";
+}
+._icon-footer__whatsapp:before {
+	content: "\e905";
+}
+._icon-footer__youtube:before {
+	content: "\e906";
+}
+._icon-footer__twitter:before {
+	content: "\e90d";
+	color: #5a5a5a;
+}

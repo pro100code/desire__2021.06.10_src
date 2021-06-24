@@ -180,9 +180,9 @@ function fonts() {
 		.pipe(browsersync.stream());
 }
 function fontstyle() {
-	let file_content = fs.readFileSync(src_folder + '/scss/fonts.scss');
+	let file_content = fs.readFileSync(src_folder + '/scss/00_02__fonts.scss');
 	if (file_content == '') {
-		fs.writeFile(src_folder + '/scss/fonts.scss', '', cb);
+		fs.writeFile(src_folder + '/scss/00_02__fonts.scss', '', cb);
 		return fs.readdir(path.build.fonts, function (err, items) {
 			if (items) {
 				let c_fontname;
@@ -190,7 +190,7 @@ function fontstyle() {
 					let fontname = items[i].split('.');
 					fontname = fontname[0];
 					if (c_fontname != fontname) {
-						fs.appendFile(src_folder + '/scss/fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
+						fs.appendFile(src_folder + '/scss/00_02__fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
 					}
 					c_fontname = fontname;
 				}
@@ -201,8 +201,8 @@ function fontstyle() {
 
 /*
 function checkWeight(fontname) {
-  let weight = 400;
-  switch (true) {
+	let weight = 400;
+	switch (true) {
 	 case /Thin/.test(fontname):
 		weight = 100;
 		break;
@@ -242,20 +242,20 @@ function checkWeight(fontname) {
 	return weight;
 }
 function fontsStyle(done) {
-  let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
-  fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
-  fs.readdir(path.build.fonts, function (err, items) {
+	let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
+	fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
+	fs.readdir(path.build.fonts, function (err, items) {
 	 if (items) {
 		let c_fontname;
 		for (var i = 0; i < items.length; i++) {
-		  let fontname = items[i].split('.');
-		  fontname = fontname[0];
-		  let font = fontname.split('-')[0];
-		  let weight = checkWeight(fontname);
-		  if (c_fontname != fontname) {
+			let fontname = items[i].split('.');
+			fontname = fontname[0];
+			let font = fontname.split('-')[0];
+			let weight = checkWeight(fontname);
+			if (c_fontname != fontname) {
 			 fs.appendFile(source_folder + '/scss/fonts.scss', '@include font("' + font + '", "' + fontname + '", "' + weight + '" , "normal");\r\n', cb);
-		  }
-		  c_fontname = fontname;
+			}
+			c_fontname = fontname;
 		}
 	 }
 	});

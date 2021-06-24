@@ -2,17 +2,14 @@
 // =====> style-head
 
 @import "00_01__mixsins_vars";
-// @import "mixins";
-@import "fonts__google";
-@import "fonts";
-@import "00_icons";
-// @import "00_variables";
-@import "00_null";
-@import "00_gallery__libs";
+@import "00_02__fonts";
+@import "00_03__fonts__google__icons";
+@import "00_05__null";
+@import "00_06__gallery__libs";
 
-@import "00_general";
-@import "00_forms";
-@import "00_sliders";
+@import "00_07__global";
+@import "00_08__forms";
+@import "00_09__sliders";
 
 @import "01__header";
 @import "01__rightside";
@@ -30,3 +27,6 @@
 
 // =====> about.html <========================================================================================================================================================
 @import "style__about";
+
+// =====> contact.html <========================================================================================================================================================
+@import "style__contact";
